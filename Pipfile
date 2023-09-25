@@ -21,6 +21,8 @@ typing-extensions = "==4.7.1"
 tzdata = "==2023.3"
 virtualenv = "==20.24.3"
 whitenoise = "==6.5.0"
+validate-email = "*"
+six = "*"
 
 [dev-packages]
 
