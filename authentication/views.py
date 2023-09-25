@@ -102,7 +102,7 @@ class RegistrationView(View):
 class VerificationView(View):
     def get(self, request, uidb64, token):
         try:
-            id = force_text(urlsafe_base64_decode(uidb64))
+            id = force_str(urlsafe_base64_decode(uidb64))
             user = User.objects.get(pk=id)
 
             if not account_activation_token.check_token(user, token):
